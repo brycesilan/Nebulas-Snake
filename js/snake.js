@@ -976,27 +976,3 @@ function getHighScore () {
     alert('Your current high score is ' + localStorage.jsSnakeHighScore + '.'); });
 }
 getHighScore();
-
-  <script src="https://cdn.jsdelivr.net/npm/nebulas@0.5.2/dist/nebulas.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nebpay.js@0.2.0/dist/nebPay.min.js"></script>
-<script>
-  var NebPay = require("nebpay");
-  var nebPay = new NebPay();
-  var serialNumber; //transaction serial number
-  var intervalQuery; //periodically query tx results
-
-  //initiate the transaction with a button click, here is an example of calling a smart contract
-  function onButtonClick() {
-      var to = "n1rCbcVUf4J5RwnoJdvGdW97fXrnBBGCxRD";   //the smart contract address of your Dapp
-      var value = $('highscore').val();
-      }
-
-      //Send transaction (here is smart contract call)
-      serialNumber = nebPay.call(to, value);
-
-      //Set a periodically query
-      intervalQuery = setInterval(function() {
-          funcIntervalQuery();
-      }, 10000); //it's recommended that the query frequency is between 10-15s.
-  </script>
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
