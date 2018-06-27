@@ -977,6 +977,8 @@ function getHighScore () {
 }
 getHighScore();
 
+  <script src="https://cdn.jsdelivr.net/npm/nebulas@0.5.2/dist/nebulas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nebpay.js@0.2.0/dist/nebPay.min.js"></script>
 <script>
   var NebPay = require("nebpay");
   var nebPay = new NebPay();
