@@ -285,7 +285,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
       intervalQuery = setInterval(function() {
           funcIntervalQuery(10000);}, 10000);
 
-      var to = "n1rCbcVUf4J5RwnoJdvGdW97fXrnBBGCxRD";
+      var to = "n1ztvquJACggDczzEZoSXLF9jjohSQpbGFS";
       var value = localStorage.jsSnakeHighScore;
       var amount = 0;
       var enableDebug = true
