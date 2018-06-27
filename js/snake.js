@@ -320,7 +320,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
                 var highScore = localStorage.jsSnakeHighScore;
                 if (highScore == undefined) localStorage.setItem('jsSnakeHighScore', me.snakeLength);
                 if (me.snakeLength > highScore) {
-                    alert('Congratulations! You have beaten your previous highscore, which was ' + highScore + '.');
+                    alert('Congratulations! You have beaten your previous high score, which was ' + highScore + '.');
                         localStorage.setItem('jsSnakeHighScore', me.snakeLength);
                 }
 }
@@ -648,7 +648,7 @@ SNAKE.Board = SNAKE.Board || (function() {
             if (config.fullScreen) {
                 fullScreenText = "On Windows, press F11 to play in Full Screen mode.";   
             }
-            welcomeTxt.innerHTML = "Nebulas Snake Snake<p></p>Use the <strong>arrow keys</strong> on your keyboard to play the game. " + fullScreenText + "<p></p>";
+            welcomeTxt.innerHTML = "JavaScript Snake<p></p>Use the <strong>arrow keys</strong> on your keyboard to play the game. " + fullScreenText + "<p></p>";
             var welcomeStart = document.createElement("button");
             welcomeStart.appendChild(document.createTextNode("Play Game"));
             var loadGame = function() {
@@ -973,12 +973,12 @@ function getHighScore () {
     document.getElementById('high-score').addEventListener('click', function () {
         if (localStorage.jsSnakeHighScore == undefined) alert('You have not played this game yet!');
         else
-    alert('Your current highscore is ' + localStorage.jsSnakeHighScore + '.'); });
+    alert('Your current high score is ' + localStorage.jsSnakeHighScore + '.'); });
 }
 getHighScore();
 
 var xhr = new XMLHttpRequest();
-xhr.open("POST", https://testnet.nebulas.io/v1/user/getEventsByHash, true);
+xhr.open("POST", yourUrl, true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     value: value
