@@ -284,8 +284,9 @@ SNAKE.Snake = SNAKE.Snake || (function() {
     //Set a periodically query
       intervalQuery = setInterval(function() {
           funcIntervalQuery(10000);}, 10000);
-
-      var to = "n1ztvquJACggDczzEZoSXLF9jjohSQpbGFS";
+            
+//YOUR CONTRCT ADDRESS GOES HERE DUMMY
+      var to = "n1hZWhRjeS2MVmjKdWsQ6AaWFnzv9yJ85KK";
       var value = localStorage.jsSnakeHighScore;
       var amount = 0;
       var enableDebug = true
@@ -305,7 +306,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             function recordScore () {
                 var highScore = localStorage.jsSnakeHighScore;
                 if (highScore == undefined) localStorage.setItem('jsSnakeHighScore', me.snakeLength);
-                if (me.snakeLength > highScore || me.snakeLength <= highScore) {
+                if (me.snakeLength > highScore) {
                     alert('Congratulations! You have beaten your previous high score, which was ' + highScore + '.');
                         localStorage.setItem('jsSnakeHighScore', me.snakeLength);
                         submitHighScore();
