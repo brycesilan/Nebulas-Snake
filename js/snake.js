@@ -283,7 +283,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         var intervalQuery; //periodically query tx results
     //Set a periodically query
       intervalQuery = setInterval(function() {
-          funcIntervalQuery(10000);}, 10000);
+          funcIntervalQuery(1000);}, 1000);
             
 //SMART CONTRCT ADDRESS GOES HERE \/\/\/\/\/\/\/\/
             
@@ -632,10 +632,7 @@ SNAKE.Board = SNAKE.Board || (function() {
             tmpElm.appendChild(tryAgainStart);
             return tmpElm;
         }
-        // ---------------------------------------------------------------------
-        // public functions
-        // ---------------------------------------------------------------------
-        
+
         me.setPaused = function(val) {
             isPaused = val;
             mySnake.setPaused(val);
@@ -659,26 +656,15 @@ SNAKE.Board = SNAKE.Board || (function() {
             elmLengthPanel.innerHTML = "Length: 1";
             me.setupPlayingField();
         };
-        /**
-        * Gets the current state of the playing board. There are 3 states: 0 - Welcome or Try Again dialog is present. 1 - User has pressed "Start Game" on the Welcome or Try Again dialog but has not pressed an arrow key to move the snake. 2 - The game is in progress and the snake is moving.
-        * @method getBoardState
-        * @return {Number} The state of the board.
-        */  
+
         me.getBoardState = function() {
             return boardState;
         };
-        /**
-        * Sets the current state of the playing board. There are 3 states: 0 - Welcome or Try Again dialog is present. 1 - User has pressed "Start Game" on the Welcome or Try Again dialog but has not pressed an arrow key to move the snake. 2 - The game is in progress and the snake is moving.
-        * @method setBoardState
-        * @param {Number} state The state of the board.
-        */  
+ 
         me.setBoardState = function(state) {
             boardState = state;
         };
-        /**
-        * @method getGridFoodValue
-        * @return {Number} A number that represents food on a number representation of the playing board.
-        */  
+
         me.getGridFoodValue = function() {
             return GRID_FOOD_VALUE;
         };
@@ -897,6 +883,6 @@ function getHighScore () {
     document.getElementById('high-score').addEventListener('click', function () {
         if (localStorage.jsSnakeHighScore == undefined) alert('You have not played this game yet!');
         else
-            window.print('Your current high score is ' + localStorage.jsSnakeHighScore + '.'); });
+            alert('Your current high score is ' + localStorage.jsSnakeHighScore + '.'); });
 }
 getHighScore();
