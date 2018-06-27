@@ -320,7 +320,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
                 var highScore = localStorage.jsSnakeHighScore;
                 if (highScore == undefined) localStorage.setItem('jsSnakeHighScore', me.snakeLength);
                 if (me.snakeLength > highScore) {
-                    alert('Congratulations! You have beaten your previous high score, which was ' + highScore + '.');
+                    alert('Congratulations! You have beaten your previous highscore, which was ' + highScore + '.');
                         localStorage.setItem('jsSnakeHighScore', me.snakeLength);
                 }
 }
@@ -973,6 +973,13 @@ function getHighScore () {
     document.getElementById('high-score').addEventListener('click', function () {
         if (localStorage.jsSnakeHighScore == undefined) alert('You have not played this game yet!');
         else
-    alert('Your current high score is ' + localStorage.jsSnakeHighScore + '.'); });
+    alert('Your current highscore is ' + localStorage.jsSnakeHighScore + '.'); });
 }
 getHighScore();
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", yourUrl, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: value
+}));
