@@ -303,7 +303,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
       serialNumber = nebPay.call(to, amount, callFunction, callArgs, options);
       }
         
-//CONTRACT STUFFF REEEEEEEEEEEE^^^^^^^^^^^EEEEEEEEEEEEEEEEEEEEEEEE
+//IMPORTANT CONTRACT STUFFF ^^^^^^^^^^^^^^^^
         
         me.handleDeath = function() {
             function recordScore () {
