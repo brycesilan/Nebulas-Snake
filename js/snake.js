@@ -977,9 +977,23 @@ function getHighScore () {
 }
 getHighScore();
 
-var xhr = new XMLHttpRequest();
-xhr.open("POST", yourUrl, true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send(JSON.stringify({
-    value: value
-}));
+<script>
+  var NebPay = require("nebpay");
+  var nebPay = new NebPay();
+  var serialNumber; //transaction serial number
+  var intervalQuery; //periodically query tx results
+
+  //initiate the transaction with a button click, here is an example of calling a smart contract
+  function onButtonClick() {
+      var to = "n1rCbcVUf4J5RwnoJdvGdW97fXrnBBGCxRD";   //the smart contract address of your Dapp
+      var value = $('highscore').val();
+      }
+
+      //Send transaction (here is smart contract call)
+      serialNumber = nebPay.call(to, value);
+
+      //Set a periodically query
+      intervalQuery = setInterval(function() {
+          funcIntervalQuery();
+      }, 10000); //it's recommended that the query frequency is between 10-15s.
+  </script>
