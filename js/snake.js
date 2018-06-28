@@ -277,12 +277,11 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             
 //SMART CONTRCT ADDRESS GOES HERE \/\/\/\/\/\/\/\/
             
-      var to = "n1hZWhRjeS2MVmjKdWsQ6AaWFnzv9yJ85KK";
+      var to = "contractAddress";
       var value = localStorage.jsSnakeHighScore;
-      var amount = 0;
       var enableDebug = true
-      var callFunction = "highscore"; //the function name to be called
-      var callArgs =  [`${value}`];  //the parameter, it's format JSON string of parameter arrays, such as'["arg"]','["arg1","arg2]'
+      var callFunction = "save"; //the function name to be called
+      var callArgs =  "[\"" + value +"\"]";  //the parameter, it's format JSON string of parameter arrays, such as'["arg"]','["arg1","arg2]'
       var options = {
           goods: {        //commodity description
               name: "example"
